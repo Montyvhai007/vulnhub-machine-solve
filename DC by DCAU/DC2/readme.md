@@ -68,7 +68,6 @@ jerry:x:1002:1002:Jerry Mouse,,,:/home/jerry:/bin/bash
 ```
 
 
-
 ```sh
 ### Switching to Jerry
 su jerry
