@@ -1,5 +1,8 @@
 # DC 1 Walkthrough
 
+
+
+
 ## Exploiting Drupalgeddon
 
 ```sh
