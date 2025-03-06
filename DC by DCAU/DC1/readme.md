@@ -72,8 +72,7 @@ cat thefinalflag.txt
 ```
 ## Final Flag
 
-**Congratulations!**
-
+> Congratulations!
 > Well done!
 > Hopefully you've enjoyed this and learned some new skills.
 > You can let me know what you thought of this little journey by contacting me via Twitter - @DCAU7
